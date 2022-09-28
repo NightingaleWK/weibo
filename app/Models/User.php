@@ -45,6 +45,7 @@ class User extends Authenticatable
     public function gravatar($size = '100')
     {
         $hash = md5(strtolower(trim($this->attributes['email'])));
-        return "https://cdn.v2ex.com/gravatar/$hash?s=$size";
+        // Gravatar 要是又 down 了，自行谷歌一个国内镜像站吧
+        return "https://gravatar.loli.net/avatar/$hash?s=$size";
     }
 }
