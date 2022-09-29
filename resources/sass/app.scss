@@ -7,37 +7,39 @@
 /* footer */
 
 footer {
-    margin-top: 45px;
-    padding-top: 5px;
-    border-top: 1px solid #eaeaea;
-    color: #777;
-    font-size: 13px;
-    font-weight: bold;
-  
-    a {
-      color: #555;
-    }
-  
-    a:hover {
-      color: #222;
-    }
-  
-    img.brand-icon {
-      width: 17px;
-      height: 17px;
-    }
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid #eaeaea;
+  color: #777;
+  font-size: 13px;
+  font-weight: bold;
+
+  a {
+    color: #555;
   }
 
-  /* User gravatar */
+  a:hover {
+    color: #222;
+  }
+
+  img.brand-icon {
+    width: 17px;
+    height: 17px;
+  }
+}
+
+/* User gravatar */
 
 section.user_info {
   padding-bottom: 10px;
   margin-top: 20px;
   text-align: center;
+
   .gravatar {
     float: none;
     max-width: 70px;
   }
+
   h1 {
     font-size: 1.4em;
     letter-spacing: -1px;
@@ -57,8 +59,15 @@ section.user_info {
 .gravatar_edit {
   margin: 15px auto;
   text-align: center;
+
   .gravatar {
     float: none;
     max-width: 100px;
   }
+}
+
+/* Status */
+
+.status-delete-btn {
+  width: max-content;
 }
