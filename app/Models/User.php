@@ -47,6 +47,6 @@ class User extends Authenticatable
         $hash = md5(strtolower(trim($this->attributes['email'])));
         // Gravatar 要是又 down 了，自行谷歌一个国内镜像站吧
         // return "https://gravatar.loli.net/avatar/$hash?s=$size";
-        return "https://gravatar.loli.net/avatar/";
+        return "http://iph.href.lu/200x200?text=%E5%8F%A3-%E5%8F%A3&fg=666666&bg=cccccc";
     }
 }
