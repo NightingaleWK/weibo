@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
+use Illuminate\Support\Str;
 
 class User extends Authenticatable
 {
@@ -48,5 +49,14 @@ class User extends Authenticatable
         // Gravatar 要是又 down 了，自行谷歌一个国内镜像站吧
         // return "https://gravatar.loli.net/avatar/$hash?s=$size";
         return "http://iph.href.lu/200x200?text=%E5%8F%A3-%E5%8F%A3&fg=666666&bg=cccccc";
+    }
+
+    public static function boot()
+    {
+        parent::boot();
+
+        static::creating(function ($user) {
+            $user->activation_token = Str::random(10);
+        });
     }
 }
